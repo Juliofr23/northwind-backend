@@ -44,7 +44,7 @@ app.get('/api/test-db', async (req, res) => {
 // Iniciar servidor
 app.listen(PORT, () => {
   console.log('=================================');
-  console.log(`🚀 Servidor corriendo en: http://localhost:${PORT}`);
-  console.log(`📊 Base de datos: ${process.env.DB_DATABASE}`);
+  console.log(`Servidor corriendo en: http://localhost:${PORT}`);
+  console.log(`Base de datos: ${process.env.DB_DATABASE}`);
   console.log('=================================');
 });

@@ -25,18 +25,18 @@ let pool;
 async function getConnection() {
   try {
     if (!pool) {
-      console.log('🔄 Conectando a SQL Server...');
-      console.log('📍 Servidor:', config.server + ':' + config.port);
-      console.log('📊 Base de datos:', config.database);
-      console.log('👤 Usuario:', config.user);
+      console.log('Conectando a SQL Server...');
+      console.log('Servidor:', config.server + ':' + config.port);
+      console.log('Base de datos:', config.database);
+      console.log('Usuario:', config.user);
       
       pool = await sql.connect(config);
       
-      console.log('✅ ¡CONEXIÓN EXITOSA CON AUTENTICACIÓN SQL!');
+      console.log('¡CONEXIÓN EXITOSA CON AUTENTICACIÓN SQL!');
     }
     return pool;
   } catch (error) {
-    console.error('❌ Error de conexión:', error.message);
+    console.error('Error de conexión:', error.message);
     throw error;
   }
 }
@@ -49,7 +49,7 @@ async function closeConnection() {
       console.log('🔌 Conexión cerrada');
     }
   } catch (error) {
-    console.error('❌ Error al cerrar:', error.message);
+    console.error('Error al cerrar:', error.message);
   }
 }
 
